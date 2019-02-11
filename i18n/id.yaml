@@ -87,6 +87,9 @@
 - id: morePost
   translation: "More Post >>>"
 
+- id: read_en
+  translation: Read in English
+
 - id: read_ru
   translation: Читать на русском
 
@@ -104,9 +107,6 @@
 
 - id: read_fr
   translation: Lire en français
-
-- id: read_id
-  translation: Baca dalam Bahasa
 
 - id: language
   translation: Language
