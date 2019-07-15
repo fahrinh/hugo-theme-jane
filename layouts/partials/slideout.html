@@ -2,7 +2,7 @@
   <div class="mobile-header-logo">
     <a href="{{ "/" | relLangURL }}" class="logo">
       {{- if .Site.Params.logoTitle -}}
-        {{ .Site.Params.logoTitle }}
+        {{ .Site.Params.logoTitle | safeHTML }}
       {{- else -}}
         {{ .Site.Title }}
       {{- end -}}
@@ -78,5 +78,15 @@
         </ul>
       </li>
     {{- end }}
+
+    {{ if .Site.Params.search.google.enable }}
+      <li class="mobile-menu-item">
+        <a id="openSearch" class="mobile-menu-item-link menu-item-search" href="#">
+          <i class="iconfont">
+            {{ partial "svg/search.svg" }}
+          </i>
+        </a>
+      </li>
+    {{ end }}
   </ul>
 </nav>
